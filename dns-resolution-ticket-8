@@ -1,0 +1,30 @@
+# DNS Resolution Update – Adding Local Hostname Entries
+
+## Summary
+Hostname resolution was failing for several internal systems on a development server. To restore proper resolution, the required DNS entries were added to the local `/etc/hosts` file as part of a configuration update.
+
+## Requirements
+**System:** Development application server  
+**DNS Entries Provided:**  
+Multiple internal hostname-to-IP mappings were supplied by the team (redacted for security). These entries were required for internal communication between services and monitoring tools.
+
+## Actions Taken
+- Connected to the server via SSH for clean copy/paste and command execution.
+- Verified logged-in user using: whoami
+
+- Opened the system hosts file: sudo vi /etc/hosts
+- Added all required hostname-to-IP mappings (internal values redacted).
+- Saved and exited the file.
+
+## Validation
+- Verified hostname resolution using: getent hosts <hostname>
+- Confirmed successful resolution with: ping -c 3 <hostname>
+
+## Result
+All DNS entries were added successfully. Hostname resolution on the server is functioning as expected.
+
+## Tags
+#linux #sysadmin #dns #troubleshooting #networking #procoreplus
+
+<!-- Internal reference: Procore Plus Ticket #8 -->
+
