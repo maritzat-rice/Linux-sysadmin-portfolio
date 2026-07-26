@@ -1,0 +1,79 @@
+# Ansible Automation – Create Tasks Using Playbook (Ticket #50)
+
+## Summary
+Created an Ansible playbook to automate user and package management tasks on a development server. The playbook created a local user, expired the user’s password, and installed a required package. All tasks were executed with privilege escalation and verified directly on the target system.
+
+## Objective
+Strengthen infrastructure automation and orchestration skills by using Ansible playbooks to perform repeatable configuration tasks across Linux systems.
+
+## Requirements
+- **Systems:** Assigned development server
+- **Task:** 
+  - Create local user `tfleming`
+  - Expire the user’s password (`chage -d 0`)
+  - Install `tmux`
+
+---
+
+## Work Performed
+
+### 1. Verified Ansible Inventory
+Checked the inventory file to ensure the correct host group was targeted:
+cat /etc/ansible/hosts
+
+### 2. Navigated to Playbook Directory
+cd /etc/ansible/playbook
+
+### 3. Created Playbook File
+sudo vi ticket50.yml
+
+### 4. Added Required Tasks to Playbook
+Sanitized playbook contents:
+```yaml
+---
+- name: Ticket 50 - Manage user and packages
+  hosts: target-host-group
+  become: yes
+
+  tasks:
+
+    - name: Create local user tfleming
+      user:
+        name: tfleming
+        state: present
+        create_home: yes
+
+    - name: Expire tfleming's password
+      command: chage -d 0 tfleming
+
+    - name: Install tmux
+      package:
+        name: tmux
+        state: present
+
+### 5. Executed the Playbook
+Used privilege escalation to run tasks requiring sudo:
+ansible-playbook /etc/ansible/playbook/ticket50.yml --ask-become-pass
+
+### 6. Verified All Changes on Target Server
+SSH into the development server:
+ssh <my-username>@<target-server>
+Confirmed user creation:
+id tfleming
+Verified password expiration:
+sudo chage -l tfleming
+Verified tmux installation:
+tmux -V
+
+## Final Status
+-User tfleming successfully created.
+-Password expiration enforced.
+-tmux installed and functioning.
+-All tasks executed without errors.
+-Ticket #50 completed successfully.
+
+##Tags
+#linux#ansible#automation#sysadmin#configurationmanagement#devops
+<!-- Internal reference: Ticket #50 -->
+
+
