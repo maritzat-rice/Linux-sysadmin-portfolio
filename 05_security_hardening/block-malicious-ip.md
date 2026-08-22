@@ -1,4 +1,4 @@
-# Security Hardening – Block Malicious IP (Ticket #39)
+# Security Hardening – Block Malicious IP 
 
 ## Summary
 The networking team reported repeated SSH attempts from a malicious external IP. Implemented firewall-based blocking across all required Linux servers to prevent unauthorized access attempts. Verified firewalld status, applied rich rules, and confirmed enforcement on each host.
@@ -8,7 +8,7 @@ Strengthen practical networking and security abilities by configuring Linux fire
 
 ## Requirements
 - **Systems:** All assigned servers
-- **Task:** Block SSH access from malicious IP `174.50.30.12`
+- **Task:** Block SSH access from malicious IP `174.XX.XX.12`
 
 ---
 
@@ -17,23 +17,52 @@ Strengthen practical networking and security abilities by configuring Linux fire
 ### 1. Logged Into Each Server Safely
 Accessed each server via Web Console as **root** to ensure firewall changes could be made without risking SSH lockout.
 
-Validated identity:
-whoami 
-hostnamectl
+### Validated identity:
+(Commands: whoami & hostnamectl)
 
-### 2. Verified and Enabled firewalld
+
+<img width="251" height="116" alt="image" src="https://github.com/user-attachments/assets/b12cdcf3-2d65-4723-bf06-bc7dfc61fe80" />
+
+
+### 2. Add the rich rule to block SSH from 174.XX.XX.12 
+(Command: firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="174.50.30.12" port port="22" protocol="tcp" drop')
+
+### Error: firewalld is not running
+
+<img width="1039" height="56" alt="image" src="https://github.com/user-attachments/assets/cb69f1eb-22af-4aa2-bed3-4ceaf1139707" />
+
+### Checked the current status
+(Command: systemctl status firewalld)
+
+### Status: Disabled
+
+<img width="864" height="179" alt="image" src="https://github.com/user-attachments/assets/6ce02ef3-57fc-49c7-ba7a-46f73d6efc63" />
+
+### 3. Verified and Enabled firewalld
 On all servers, firewalld was initially **disabled**.
 
 Enabled and started the service:
 systemctl start firewalld 
+
+<img width="360" height="40" alt="image" src="https://github.com/user-attachments/assets/15588bee-2939-4007-8e8a-84393c554376" />
+
 systemctl enable firewalld 
-systemctl status firewalld
 
-Confirmed firewalld was active before applying rules.
+<img width="844" height="76" alt="image" src="https://github.com/user-attachments/assets/d766a970-d315-42b5-9652-c39e53b29116" />
 
-### 3. Added Rich Rule to Block Malicious IP
+Confirmed it's active with command: systemctl is-active firewalld
+
+<img width="367" height="65" alt="image" src="https://github.com/user-attachments/assets/4e989042-af01-4a44-b5fb-6fc2a3dc7a45" />
+
+
+### 4. Added Rich Rule to Block Malicious IP
 Applied a permanent firewall rule to drop SSH traffic from the malicious IP:
-firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="174.50.30.12" port port="22" protocol="tcp" drop'
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="174.XX.XX.12" port port="22" protocol="tcp" drop'
+
+(Command: firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="174.XX.XX.12" port port="22" protocol="tcp" drop')
+
+<img width="1027" height="59" alt="image" src="https://github.com/user-attachments/assets/d501fc74-6186-4dc9-b788-ae6dfd5dba4f" />
+
 
 Reloaded firewall:
 firewall-cmd –reload
@@ -42,17 +71,14 @@ firewall-cmd –reload
 Checked that the rule was successfully added:
 firewall-cmd --list-rich-rules
 
-Confirmed the DROP rule referencing `174.50.30.12` appeared on all servers.
+Confirmed the DROP rule referencing `174.XX.XX.12` appeared on all servers.
 
 ---
 
 ## Final Status
-- Malicious IP `174.50.30.12` is now blocked across all required servers.
+- Malicious IP `174.XX.XX.12` is now blocked across all required servers.
 - SSH attempts from the IP are dropped before authentication.
 - All servers remain fully accessible to authorized users.
-- Ticket #39 resolved successfully.
 
-## Tags
-#linux #sysadmin #security #firewall #hardening #ssh #incidentresponse
 
-<!-- Internal reference: Ticket #39 -->
+
