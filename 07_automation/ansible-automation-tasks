@@ -1,4 +1,4 @@
-# Ansible Automation – Create Tasks Using Playbook (Ticket #50)
+# Ansible Automation – Create Tasks Using Playbook 
 
 ## Summary
 Created an Ansible playbook to automate user and package management tasks on a development server. The playbook created a local user, expired the user’s password, and installed a required package. All tasks were executed with privilege escalation and verified directly on the target system.
