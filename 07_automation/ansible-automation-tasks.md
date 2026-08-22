@@ -28,52 +28,34 @@ cd /etc/ansible/playbook
 sudo vi ticket50.yml
 
 ### 4. Added Required Tasks to Playbook
-Sanitized playbook contents:
-```yaml
----
-- name: Ticket 50 - Manage user and packages
-  hosts: target-host-group
-  become: yes
+<img width="402" height="247" alt="image" src="https://github.com/user-attachments/assets/8d36575b-fa32-47fe-ad71-bdb4eb24cba4" />
 
-  tasks:
 
-    - name: Create local user tfleming
-      user:
-        name: tfleming
-        state: present
-        create_home: yes
+### 5. Ran the playbook
+Command: ansible-playbook /etc/ansible/playbook/ticket50.yml --ask-become-pass
+<img width="540" height="305" alt="image" src="https://github.com/user-attachments/assets/94ea7780-6f2e-426b-9dbc-a2711311c018" />
 
-    - name: Expire tfleming's password
-      command: chage -d 0 tfleming
+### 6. Next,verified updates on target host
+### SSH into dev-app: ssh mrice@10.X.XX.172
 
-    - name: Install tmux
-      package:
-        name: tmux
-        state: present
+id: tfleming
+<img width="558" height="82" alt="image" src="https://github.com/user-attachments/assets/7289afaf-5b7f-410b-aac7-d0c7a668c394" />
+(User created)
 
-### 5. Executed the Playbook
-Used privilege escalation to run tasks requiring sudo:
-ansible-playbook /etc/ansible/playbook/ticket50.yml --ask-become-pass
+### 7. sudo chage -l tfleming
+<img width="542" height="146" alt="image" src="https://github.com/user-attachments/assets/14860a97-2da6-456f-aae6-2e9b696b30a9" />
+(Password is Expired)
 
-### 6. Verified All Changes on Target Server
-SSH into the development server:
-ssh <my-username>@<target-server>
-Confirmed user creation:
-id tfleming
-Verified password expiration:
-sudo chage -l tfleming
-Verified tmux installation:
-tmux -V
+### 8. Verify the installation
+(Command: tmux -V)
 
-## Final Status
--User tfleming successfully created.
--Password expiration enforced.
--tmux installed and functioning.
--All tasks executed without errors.
--Ticket #50 completed successfully.
+<img width="289" height="72" alt="image" src="https://github.com/user-attachments/assets/f3e53fde-bb15-4991-b319-91b980ce3441" />
 
-##Tags
-#linux#ansible#automation#sysadmin#configurationmanagement#devops
-<!-- Internal reference: Ticket #50 -->
+
+
+
+
+
+
 
 
