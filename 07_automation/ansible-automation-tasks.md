@@ -28,28 +28,31 @@ cd /etc/ansible/playbook
 sudo vi ticket50.yml
 
 ### 4. Added Required Tasks to Playbook
-<img width="402" height="247" alt="image" src="https://github.com/user-attachments/assets/8d36575b-fa32-47fe-ad71-bdb4eb24cba4" />
+<img src="https://github.com/user-attachments/assets/8d36575b-fa32-47fe-ad71-bdb4eb24cba4" width="250"/>
 
 
 ### 5. Ran the playbook
 Command: ansible-playbook /etc/ansible/playbook/ticket50.yml --ask-become-pass
-<img width="540" height="305" alt="image" src="https://github.com/user-attachments/assets/94ea7780-6f2e-426b-9dbc-a2711311c018" />
+<img src="https://github.com/user-attachments/assets/94ea7780-6f2e-426b-9dbc-a2711311c018" width="250"/>
 
 ### 6. Next,verified updates on target host
 ### SSH into dev-app: ssh mrice@10.X.XX.172
 
 id: tfleming
-<img width="558" height="82" alt="image" src="https://github.com/user-attachments/assets/7289afaf-5b7f-410b-aac7-d0c7a668c394" />
+
+<img src="https://github.com/user-attachments/assets/7289afaf-5b7f-410b-aac7-d0c7a668c394" width="250"/>
+
 (User created)
 
 ### 7. sudo chage -l tfleming
-<img width="542" height="146" alt="image" src="https://github.com/user-attachments/assets/14860a97-2da6-456f-aae6-2e9b696b30a9" />
+<img src="https://github.com/user-attachments/assets/14860a97-2da6-456f-aae6-2e9b696b30a9" width="250"/>
+
 (Password is Expired)
 
 ### 8. Verify the installation
 (Command: tmux -V)
 
-<img width="289" height="72" alt="image" src="https://github.com/user-attachments/assets/f3e53fde-bb15-4991-b319-91b980ce3441" />
+<img src="https://github.com/user-attachments/assets/f3e53fde-bb15-4991-b319-91b980ce3441" width="150"/>
 
 
 
