@@ -21,7 +21,7 @@ Accessed each server via Web Console as **root** to ensure firewall changes coul
 (Commands: whoami & hostnamectl)
 
 
-<img width="251" height="116" alt="image" src="https://github.com/user-attachments/assets/b12cdcf3-2d65-4723-bf06-bc7dfc61fe80" />
+<img src="https://github.com/user-attachments/assets/b12cdcf3-2d65-4723-bf06-bc7dfc61fe80" width="150"/>
 
 
 ### 2. Add the rich rule to block SSH from 174.XX.XX.12 
@@ -36,7 +36,7 @@ Accessed each server via Web Console as **root** to ensure firewall changes coul
 
 ### Status: Disabled
 
-<img width="864" height="179" alt="image" src="https://github.com/user-attachments/assets/6ce02ef3-57fc-49c7-ba7a-46f73d6efc63" />
+<img src="https://github.com/user-attachments/assets/6ce02ef3-57fc-49c7-ba7a-46f73d6efc63" width="400"/>
 
 ### 3. Verified and Enabled firewalld
 On all servers, firewalld was initially **disabled**.
@@ -44,15 +44,15 @@ On all servers, firewalld was initially **disabled**.
 Enabled and started the service:
 systemctl start firewalld 
 
-<img width="360" height="40" alt="image" src="https://github.com/user-attachments/assets/15588bee-2939-4007-8e8a-84393c554376" />
+<img src="https://github.com/user-attachments/assets/15588bee-2939-4007-8e8a-84393c554376" width="250"/>
 
 systemctl enable firewalld 
 
-<img width="844" height="76" alt="image" src="https://github.com/user-attachments/assets/d766a970-d315-42b5-9652-c39e53b29116" />
+<img src="https://github.com/user-attachments/assets/d766a970-d315-42b5-9652-c39e53b29116" width="400"/>
 
 Confirmed it's active with command: systemctl is-active firewalld
 
-<img width="367" height="65" alt="image" src="https://github.com/user-attachments/assets/4e989042-af01-4a44-b5fb-6fc2a3dc7a45" />
+<img src="https://github.com/user-attachments/assets/4e989042-af01-4a44-b5fb-6fc2a3dc7a45" width="250"/>
 
 
 ### 4. Added Rich Rule to Block Malicious IP
