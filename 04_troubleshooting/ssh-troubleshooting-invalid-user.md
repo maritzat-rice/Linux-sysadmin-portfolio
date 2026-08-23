@@ -18,15 +18,16 @@ Developers reported repeated SSH login failures when attempting to access an app
 Connected to the Bastion host to begin the investigation.
 ssh root@<bastion-ip>
 
-<img width="506" height="91" alt="image" src="https://github.com/user-attachments/assets/9788b47d-8aa6-4a3d-9430-7a6e85d45551" />
+<img src="https://github.com/user-attachments/assets/9788b47d-8aa6-4a3d-9430-7a6e85d45551" width="250"/>
 
 ### 2. Access Application Server
 From the Bastion host, connected to the application server as root.
 ssh root@<app-server-ip> hostname whoami
 
-<img width="640" height="125" alt="image" src="https://github.com/user-attachments/assets/756bae37-fb82-41c5-acef-e4d14179caf4" />
+<img src="https://github.com/user-attachments/assets/756bae37-fb82-41c5-acef-e4d14179caf4" width="250"/>
 
-<img width="308" height="99" alt="image" src="https://github.com/user-attachments/assets/d8af6993-59e7-427a-afca-c59f16cdb027" />
+
+<img src="https://github.com/user-attachments/assets/d8af6993-59e7-427a-afca-c59f16cdb027" width="125"/>
 
 
 
@@ -36,7 +37,7 @@ ssh <developer-user>@<bastion-ip>
 ssh apprentice@<app-server-ip>
 
 
-<img width="479" height="162" alt="image" src="https://github.com/user-attachments/assets/a4a3380b-aed1-4ab6-add4-de7c2bcf8017" />
+<img src="https://github.com/user-attachments/assets/a4a3380b-aed1-4ab6-add4-de7c2bcf8017" width="250"/>
 
 
 **Observed Output:**
@@ -50,17 +51,17 @@ This confirmed the issue reported by developers.
 Reconnected to the application server as root and reviewed SSH authentication logs.
 tail -n 20 /var/log/secure
 
-<img width="452" height="27" alt="image" src="https://github.com/user-attachments/assets/027ec255-ab3d-4769-aea4-c0bb81de27ed" />
+<img src="https://github.com/user-attachments/assets/027ec255-ab3d-4769-aea4-c0bb81de27ed" width="250"/>
 
 Output:
 
-<img width="671" height="464" alt="image" src="https://github.com/user-attachments/assets/ca16cedb-7f67-4351-bf84-4205c546d6bf" />
+<img src="https://github.com/user-attachments/assets/ca16cedb-7f67-4351-bf84-4205c546d6bf" width="350"/>
 
 
 or
 journalctl -u sshd -n 20
 
-<img width="677" height="268" alt="image" src="https://github.com/user-attachments/assets/099091a6-c691-4129-8943-2989053c4842" />
+<img src="https://github.com/user-attachments/assets/099091a6-c691-4129-8943-2989053c4842" width="350"/>
 
 
 ### 5. Log Findings
