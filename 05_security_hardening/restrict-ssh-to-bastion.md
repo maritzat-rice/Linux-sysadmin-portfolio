@@ -23,9 +23,11 @@ hostnamectl
 - Verified IP address using:
 ip a
 
-<img width="238" height="105" alt="image" src="https://github.com/user-attachments/assets/cf6dd12d-4606-4d49-adfd-34f5a139f9e4" />
+<img src="https://github.com/user-attachments/assets/cf6dd12d-4606-4d49-adfd-34f5a139f9e4" width="200"/>
 
-<img width="626" height="179" alt="image" src="https://github.com/user-attachments/assets/6e475ac2-f4b0-46cc-a3a4-cde886ca5102" />
+
+
+<img src="https://github.com/user-attachments/assets/6e475ac2-f4b0-46cc-a3a4-cde886ca5102" width="350"/>
 
 
 
@@ -33,19 +35,19 @@ ip a
 Configured each server to accept SSH only from the Bastion host by adding a rich rule:
 firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="<bastion-ip>/32" port port="22" protocol="tcp" accept'
 
-<img width="1051" height="64" alt="image" src="https://github.com/user-attachments/assets/d7e9c116-f5ac-42b5-adae-6e29d16d65b7" />
+<img src="https://github.com/user-attachments/assets/d7e9c116-f5ac-42b5-adae-6e29d16d65b7" width="450"/>
 
 Removed default SSH access paths:
 firewall-cmd --remove-port=22/tcp --permanent 
 firewall-cmd --remove-service=ssh –permanent
 
-<img width="493" height="102" alt="image" src="https://github.com/user-attachments/assets/00d29f7e-c591-4c7c-a214-8f9b60db2fcb" />
+<img src="https://github.com/user-attachments/assets/00d29f7e-c591-4c7c-a214-8f9b60db2fcb" width="250"/>
 
 
 Reloaded firewall:
 firewall-cmd –reload
 
-<img width="332" height="63" alt="image" src="https://github.com/user-attachments/assets/d26191be-d54c-46e3-a91f-6cb3ef4a5b4c" />
+<img src="https://github.com/user-attachments/assets/d26191be-d54c-46e3-a91f-6cb3ef4a5b4c" width="225"/>
 
 
 ### 3. Testing Phase – SSH Access Validation
@@ -55,7 +57,7 @@ Expected result: **SSH succeeds**
 ssh <user>@<bastion-ip> 
 ssh <user>@<server-ip>
 
-<img width="727" height="184" alt="image" src="https://github.com/user-attachments/assets/df91dd95-37dd-4268-841f-6969d1e5b72e" />
+<img src="https://github.com/user-attachments/assets/df91dd95-37dd-4268-841f-6969d1e5b72e" width="250"/>
 
 
 #### Test 2 — SSH from Non‑Bastion Source (e.g., Windows)
@@ -63,7 +65,7 @@ Expected result: **Connection timed out**
 ssh <user>@<server-ip>
 
 
-<img width="576" height="86" alt="image" src="https://github.com/user-attachments/assets/8acc356d-8e37-4726-92e5-f406df0000e6" />
+<img src="https://github.com/user-attachments/assets/8acc356d-8e37-4726-92e5-f406df0000e6" width="250"/>
 
 
 Confirmed:
