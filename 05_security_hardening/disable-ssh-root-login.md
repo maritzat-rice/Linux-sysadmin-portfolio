@@ -20,7 +20,7 @@ Disallowing root logins over SSH ensures administrators authenticate using indiv
 ### 1. Verified Access and User State
 - Logged into each server and confirmed root access.
 
-<img width="235" height="66" alt="image" src="https://github.com/user-attachments/assets/4e8f6f65-1769-44e9-a788-e361404c7cca" />
+<img src="https://github.com/user-attachments/assets/4e8f6f65-1769-44e9-a788-e361404c7cca" width="200"/>
 
 - Verified that the user **mrice** existed on each host.
 - Checked group membership to ensure proper privilege escalation.
@@ -32,7 +32,7 @@ Mrice user does NOT appear to be in the wheel group, which means I cannot disabl
 ### 2. Validated Sudo Privileges
 - **dev‑app, dev‑performance, stage‑web:** Confirmed or added `mrice` to the `wheel` group.
 
-<img width="342" height="39" alt="image" src="https://github.com/user-attachments/assets/bbb53424-884f-40ae-a5ec-305e9229169a" />
+<img src="https://github.com/user-attachments/assets/bbb53424-884f-40ae-a5ec-305e9229169a" width="250"/>
 
 - **ansible server:** Verified sudo access through domain groups (no local `wheel` group required).
 
@@ -40,7 +40,7 @@ Mrice user does NOT appear to be in the wheel group, which means I cannot disabl
 Confirmed the following setting on all servers to allow password-based testing:
 PasswordAuthentication yes
 
-<img width="498" height="166" alt="image" src="https://github.com/user-attachments/assets/20d92516-6555-4a31-8617-85d658626ffb" />
+<img src="https://github.com/user-attachments/assets/20d92516-6555-4a31-8617-85d658626ffb" width="250"/>
 
 
 ### 4. Tested User SSH Access
@@ -51,7 +51,7 @@ Successfully authenticated into each server as **mrice** to validate:
 
 This ensured no lockout would occur after disabling root login.
 
-<img width="640" height="175" alt="image" src="https://github.com/user-attachments/assets/cbacfc73-371e-429e-836a-d5c571b482f8" />
+<img src="https://github.com/user-attachments/assets/cbacfc73-371e-429e-836a-d5c571b482f8" width="250"/>
 
 
 ### 5. Disabled Root SSH Login
@@ -59,16 +59,19 @@ Updated SSH configuration on each server:
 PermitRootLogin no
 
 
-<img width="334" height="33" alt="image" src="https://github.com/user-attachments/assets/3b15b004-cc13-4062-9068-b94a6a4235ab" />
+
+<img src="https://github.com/user-attachments/assets/3b15b004-cc13-4062-9068-b94a6a4235ab" width="200"/>
 
 
-<img width="177" height="97" alt="image" src="https://github.com/user-attachments/assets/e7e4d0f8-7a17-4713-8a0c-ea91161ccec6" />
+
+
+<img src="https://github.com/user-attachments/assets/e7e4d0f8-7a17-4713-8a0c-ea91161ccec6" width="100" />
 
 
 Restarted SSH service:
 systemctl restart sshd
 
-<img width="336" height="65" alt="image" src="https://github.com/user-attachments/assets/1939d66c-ae4e-4d5b-a49b-0cdad66a9730" />
+<img src="https://github.com/user-attachments/assets/1939d66c-ae4e-4d5b-a49b-0cdad66a9730" width="200"/>
 
 
 ### 6. Verified Enforcement
@@ -79,7 +82,7 @@ Confirmed:
 - `Permission denied`
 - Root login fully disabled
 
-<img width="343" height="133" alt="image" src="https://github.com/user-attachments/assets/0734b7e6-d4e6-49e6-8e67-655599f2e2a2" />
+<img src="https://github.com/user-attachments/assets/0734b7e6-d4e6-49e6-8e67-655599f2e2a2" width="200"/>
 
 ---
 
