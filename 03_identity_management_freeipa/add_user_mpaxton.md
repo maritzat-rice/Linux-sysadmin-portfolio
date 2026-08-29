@@ -86,3 +86,53 @@ This confirms the user was successfully added to the correct group.
 ## Result
 The new developer account **mpaxton** has been successfully created and added to the **webmasters** group.  
 This ensures proper access control and centralized identity management within the FreeIPA environment.
+
+===================================================================
+## Additional Access Assignment: Add User to "support" Group
+
+### Objective
+Assign the newly created user **mpaxton** to the **support** group to grant access required for the production webpage revamp project.
+
+### Steps Completed
+
+1.	Logged into the FreeIPA UI:  https://ipa.XX.dev/ipa/ui
+
+2. Navigated to:
+- **Identity → Users**
+- Searched for: **mpaxton**
+- Clicked the username to open the profile
+
+3. Selected the **User Groups** tab to view current memberships:
+- ipausers  
+- webmasters  
+
+
+<img src="https://github.com/user-attachments/assets/12026ede-e3cc-478e-978e-183d74601c15" width="300"/>
+
+4. Clicked **Add** to open the group selection dialog.
+
+5. In the Available Groups list:
+- Checked **support**
+- Clicked the **>** arrow to move it into the Prospective panel
+
+
+<img src="https://github.com/user-attachments/assets/5c251696-eac6-40fd-aa33-d36f0ff68f14" width="300"/>
+
+6. Clicked **Add** to finalize the group assignment.
+
+<img src="https://github.com/user-attachments/assets/66cf3f7e-ce09-4c0c-af77-b70124e7f750" width="300"/>
+
+
+### Verification
+Returned to the user profile and confirmed:
+
+**Direct Membership:**
+- webmasters  
+- support ✔
+
+This confirms the user was successfully added to the **support** group.
+
+
+<img src="https://github.com/user-attachments/assets/c4ea8b0e-7779-4b4a-8dab-491db2c24f84" width="300"/>
+
+
