@@ -67,5 +67,45 @@ On the VM’s **Summary** tab:
 ## Result
 The resource pool **MRICE-CLUSTER** was successfully created and the VM **dev-app-XX1.XX.prod1** was migrated into it. This improves compute resource organization and prepares the environment for future VM deployments.
 
+---
+
+## 🔹 Sub Task: Migration Workflow Review (VM → Resource Pool)
+
+### Objective
+Revisit and validate the VM migration workflow to ensure proper placement within the newly created resource pool and reinforce confidence in compute resource mobility.
+
+### Title
+Migration Workflow Review for VM dev-app-mr1.XX.prod1
+
+### Summary
+After creating the resource pool, the VM migration workflow was reviewed to confirm correct placement and validate that the VM was already assigned to the intended compute resource. This exercise reinforces familiarity with vSphere’s migration options and resource pool hierarchy.
+
+### Steps Reviewed
+- Navigated to **Hosts and Clusters**.
+- Right clicked the VM → **Migrate**.
+
+<img src="https://github.com/user-attachments/assets/07965435-3c76-4444-9429-bef43d7f0cd2" width="250"/>
+
+- Selected **Change compute resource only**.
+
+<img src="https://github.com/user-attachments/assets/64d12a28-68c9-4894-8d1e-2eff24aac5d5" width="250"/>
+
+- Switched the wizard view to **Resource Pools**.
+
+<img src="https://github.com/user-attachments/assets/8def5e9a-3ab4-4864-b982-eaaed70402e5" width="250"/>
+
+- Verified that the VM was already assigned to **MRICE-CLUSTER**.
+
+### Verification
+- VM Summary tab shows Resource Pool: **MRICE-CLUSTER**.
+
+<img src="https://github.com/user-attachments/assets/b06e24db-2efb-4351-bade-a8702b04bd35" width="250"/>
+
+- VM appears under the resource pool in the left hand inventory tree.
+
+### Result
+No migration was required.  
+This review served as a validation exercise to reinforce confidence in VM mobility, compute resource assignment, and correct resource pool placement.
+
 
 
