@@ -15,8 +15,8 @@ After connecting as mrice, the correct “Up and Ready” version of the website
 replacing the maintenance banner.
 - Restarted Apache to apply changes:systemctl restart httpd
 - Verified the live site at:
-- http://10.1.30.175/procore-products/procore  
-- http://dev-performance-mr1.procore.prod1/procore  
+- http://10.X.XX.175/XXXX-products/XXX  
+- http://dev-performance-mr1.XXXX.prod1/XXX  
 Displays the **“Website is up and running”** banner.
 - Confirmed no maintenance messaging remains on the active application.
 
@@ -27,33 +27,33 @@ Displays the **“Website is up and running”** banner.
 - Maintenance banner fully removed.
 
 ## Result
-Website successfully restored.  
-Maintenance banner removed.  
-Service remains fully operational.
+- Website successfully restored.  
+- Maintenance banner removed.  
+- Service remains fully operational.
 
 ## Attachments
 
 ### WebsiteUpAndReady Directory
 
-<img src="https://github.com/user-attachments/assets/99118074-7fd9-43c3-a6d2-53ad2d4c2ddb" width="350"/>
+<p>
+<img src="https://github.com/user-attachments/assets/06c65902-dc2f-48df-9a0b-66054432e70b" width="250"/>
+<p>
 
-
-
+<p>
 <img src="https://github.com/user-attachments/assets/d784b659-eb90-4660-820a-4702701246ac" width="250"/>
-
+<p>
+  
 ### File Copy to /var/www/html
-
 
 <img src="https://github.com/user-attachments/assets/a4410cde-258d-491e-bc96-1d6978e22776" width="250"/>
 
-### Apache Restart Confirmation
 
+### Apache Restart Confirmation
 
 <img src="https://github.com/user-attachments/assets/852a8444-fc15-4e67-8900-88130fe760df" width="250"/>
 
 
 ### “Website is up and running” Banner
-
 
 <img src="https://github.com/user-attachments/assets/a01e930f-d374-4d4f-8681-aa367c28ac01" width="250"/>
 
