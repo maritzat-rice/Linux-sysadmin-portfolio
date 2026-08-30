@@ -32,22 +32,23 @@ Verified login: ssh mrice@stage-web-XX.XXX.prod1
 - ls -l ~/.ssh 
 - cat ~/.ssh/id_ed25519.pub
 
-
+<p>
 <img src="https://github.com/user-attachments/assets/b7d0f490-ded5-48b3-9a1c-ea379af84016" width="250"/>
+<p>
 
-
-
+<p>
 <img src="https://github.com/user-attachments/assets/4d59968d-968c-429b-bc93-adc0cfaf2956" width="250"/>
-
+<p>
 
 - Copied the public key into GitLab for SSH authentication.
 
-
+<p>
 <img src="https://github.com/user-attachments/assets/5968d7ab-1534-4dec-af81-fa64807c0666" width="250"/>
+<p>
 
-
+<p>
 <img src="https://github.com/user-attachments/assets/28007557-5a65-48ff-b98d-790dfedfe9a2" width="250"/>
-
+<p>
 
 - Tested GitLab SSH:  ssh -T git@gitlab.com
 
@@ -96,11 +97,13 @@ ssh root@stage-web-XX.XXXX.prod1
 Updated hosts file:
 vi /etc/hosts 10.1.XX.XXX ipa.XX.prod1
 
+<p>
 <img src="https://github.com/user-attachments/assets/e001e361-0979-40f4-be1b-54a0fbafbf88" width="250"/>
+<p>
 
-
+<p>
 <img src="https://github.com/user-attachments/assets/1f7e3b39-8b28-4fa5-8815-0633fffc096c" width="250"/>
-
+<p>
 
 Tested:
 ping -c 3 ipa.XX.prod1
@@ -162,30 +165,31 @@ Added stage group and stage-web host.
 ---
 
 ### 🔹 8. Configured Passwordless SSH
-On dev-ansible:
-cat ~/.ssh/id_ed25519.pub
+
+**On dev-ansible:**
+- cat ~/.ssh/id_ed25519.pub
 
 
 <img src="https://github.com/user-attachments/assets/acf0e57b-a580-45d3-820f-3653bd4b3696" width="250"/>
 
 
-On stage-web:
+**On stage-web:**
 - mkdir -p ~/.ssh 
 - chmod 700 ~/.ssh 
 - vi ~/.ssh/authorized_keys 
 - chmod 600 ~/.ssh/authorized_keys
 
+<p>
+<img src="https://github.com/user-attachments/assets/ad32fbaf-7454-4c03-8307-094f4e6978e0" width="200"/>
+<p>
 
-<img src="https://github.com/user-attachments/assets/ad32fbaf-7454-4c03-8307-094f4e6978e0" width="250"/>
-
-
-
+<p>
 <img src="https://github.com/user-attachments/assets/81650497-ff0c-4ead-a337-0c1406850ed6" width="250"/>
+<p>
 
-
-
+<p>
 <img src="https://github.com/user-attachments/assets/a8a5d72e-8388-4aa8-9355-e95bc2d1e8c0" width="250"/>
-
+<p>
 
 Tested:
 ssh stage-web-XX.procore.prod1
