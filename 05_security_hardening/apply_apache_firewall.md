@@ -11,12 +11,13 @@ After elevating to root, both HTTP (80/tcp) and HTTPS (443/tcp) ports were added
 - Connected to **stage‑web‑mr1** via Bastion and elevated to root.
 - Added required Apache ports:
 
-
+<p>
 <img src="https://github.com/user-attachments/assets/74a06159-3545-48e8-8bb2-6570b09ce692" width="250"/>
+<p>
 
-
+<p>
 <img src="https://github.com/user-attachments/assets/0382cb4e-d7f2-4c91-986a-a6b6995a526c" width="250"/>
-
+<p>
 
 - Allowed Apache services:
 
