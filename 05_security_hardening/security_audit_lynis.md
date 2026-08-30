@@ -22,15 +22,14 @@ Verification confirmed that the log file was successfully created and contains t
 
 - Verified the audit log file:
 
-
-
+<p>
 <img src="https://github.com/user-attachments/assets/c0fddd74-aa7d-4361-b978-bbc283d7de58" width="350"/>
+<p>
 
-
-
-
+<p>
 <img src="https://github.com/user-attachments/assets/6aabf742-1fd9-4d24-a607-f5c96b2404b4" width="350"/>
-
+<p>
+  
 - Confirmed the file contains full audit results including:
 - Security warnings  
 - Hardening suggestions  
