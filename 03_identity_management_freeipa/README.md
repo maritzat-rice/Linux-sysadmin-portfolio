@@ -90,20 +90,9 @@ This aligns with IAM reporting and compliance tasks.
 - Documentation of administrative tasks  
 - Root cause analysis  
 
-These tasks align with both Linux SysAdmin responsibilities and IAM foundations required for cybersecurity roles.
 
----
 
-## 🎯 Purpose of This Folder
 
-This folder is part of a larger Linux SysAdmin portfolio designed to showcase:
-- Real administrative workflows  
-- Ticket-based problem solving  
-- Clear documentation  
-- Practical IAM experience  
-- Professional organization of technical work  
-
-Each task mirrors real-world responsibilities performed in enterprise environments.
 
 
 
