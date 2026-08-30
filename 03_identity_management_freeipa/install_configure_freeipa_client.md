@@ -14,7 +14,8 @@ Successfully enrolled the host into the **XX.DEV** realm, enabling centralized a
 ## Completed Tasks
 
 ### 🔹 1. Verified Network Reachability
-Checked connectivity to the FreeIPA server: ping -c2 10.1.XX.XXX
+
+- Checked connectivity to the FreeIPA server: ping -c2 10.1.XX.XXX
 
 <img src="https://github.com/user-attachments/assets/355ef7d7-a1e6-486e-8475-3c0e7021ad75" width="250"/>
 
@@ -24,24 +25,26 @@ Checked connectivity to the FreeIPA server: ping -c2 10.1.XX.XXX
 <img src="https://github.com/user-attachments/assets/b3fcbea7-7c1e-4b74-a7c2-392b87ca09fb" width="250"/>
 
 ### 🔹 3. Resolved Hostname Error
-Initial error: Invalid hostname, 'localhost' must not be used. 
-The ipa-client-install command failed.
+
+- **Initial error:** Invalid hostname, 'localhost' must not be used. 
+- The ipa-client-install command failed.
 
 
 **Fix:** Updated hostname to a valid FQDN.
-sudo hostnamectl set-hostname dev-app-XX.XX.dev 
-exec bash 
-hostname 
-hostnamectl
+- sudo hostnamectl set-hostname dev-app-XX.XX.dev 
+- exec bash 
+- hostname 
+- hostnamectl
 
 
 <img src="https://github.com/user-attachments/assets/3206a7e5-3a97-4bf2-852f-3dedb10275b2" width="300"/>
 
 ### 🔹 4. Ran Client Installation
-sudo ipa-client-install –mkhomedir
 
+- sudo ipa-client-install –mkhomedir
 
 <img src="https://github.com/user-attachments/assets/6db20dce-9ace-49bb-97cc-76e990137e01" width="300"/>
+
 
 ## Troubleshooting & Root Cause Analysis
 
