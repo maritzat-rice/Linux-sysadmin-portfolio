@@ -26,7 +26,8 @@ Disallowing root logins over SSH ensures administrators authenticate using indiv
 - Checked group membership to ensure proper privilege escalation.
 
 <img width="1121" height="69" alt="image" src="https://github.com/user-attachments/assets/9940fb59-68a8-4d44-b6f2-4ec5a7cc71a1" />
-Mrice user does NOT appear to be in the wheel group, which means I cannot disable root SSH yet; I would lose sudo access and that would lock me out.
+
+- **mrice** user does NOT appear to be in the wheel group, which means I cannot disable root SSH yet; I would lose sudo access and that would lock me out.
 
 
 ### 2. Validated Sudo Privileges
@@ -37,8 +38,8 @@ Mrice user does NOT appear to be in the wheel group, which means I cannot disabl
 - **ansible server:** Verified sudo access through domain groups (no local `wheel` group required).
 
 ### 3. Ensured Safe SSH Testing
-Confirmed the following setting on all servers to allow password-based testing:
-PasswordAuthentication yes
+- Confirmed the following setting on all servers to allow password-based testing:
+- PasswordAuthentication yes
 
 <img src="https://github.com/user-attachments/assets/20d92516-6555-4a31-8617-85d658626ffb" width="250"/>
 
@@ -49,36 +50,34 @@ Successfully authenticated into each server as **mrice** to validate:
 - Password authentication  
 - Sudo functionality  
 
-This ensured no lockout would occur after disabling root login.
+*This ensured no lockout would occur after disabling root login.*
 
 <img src="https://github.com/user-attachments/assets/cbacfc73-371e-429e-836a-d5c571b482f8" width="250"/>
 
 
 ### 5. Disabled Root SSH Login
-Updated SSH configuration on each server:
-PermitRootLogin no
+**Updated SSH configuration on each server:**
+- PermitRootLogin no
 
-
-
+<p>
 <img src="https://github.com/user-attachments/assets/3b15b004-cc13-4062-9068-b94a6a4235ab" width="200"/>
+<p>
 
-
-
-
+<p>
 <img src="https://github.com/user-attachments/assets/e7e4d0f8-7a17-4713-8a0c-ea91161ccec6" width="100" />
+<p>
 
-
-Restarted SSH service:
-systemctl restart sshd
+**Restarted SSH service:**
+- systemctl restart sshd
 
 <img src="https://github.com/user-attachments/assets/1939d66c-ae4e-4d5b-a49b-0cdad66a9730" width="200"/>
 
 
 ### 6. Verified Enforcement
-Attempted SSH login as root on each server:
-ssh root@<server-ip>
+**Attempted SSH login as root on each server:**
+- ssh root@<server-ip>
 
-Confirmed:
+**Confirmed:**
 - `Permission denied`
 - Root login fully disabled
 
