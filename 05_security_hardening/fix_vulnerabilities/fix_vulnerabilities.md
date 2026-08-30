@@ -1,7 +1,7 @@
 ## Fixing Vulnerabilities Identified in OpenVAS Scan
 
 ## Objective
-Remediate and validate vulnerabilities discovered during the initial OpenVAS scan as part of monthly compliance requirements for **XX Plus**. This task reinforces skills in vulnerability triage, coordination with development teams, remediation tracking, and validation through follow‑up scanning.
+Remediate and validate vulnerabilities discovered during the initial OpenVAS scan as part of monthly compliance requirements for Procore Plus**. This task reinforces skills in vulnerability triage, coordination with development teams, remediation tracking, and validation through follow‑up scanning.
 
 ## Summary
 Reviewed the initial OpenVAS report from Ticket XX and created subtasks for each identified vulnerability, prioritizing them from High to Low severity. Coordinated with the development team to ensure all issues were understood and addressed.  
@@ -21,7 +21,7 @@ All subtasks were updated from **In Process → Done**, and the validation scan 
 - Coordinated with the development team to track progress and confirm fixes.
 - Logged into the OpenVAS console at:
   - `https://10.1.XX.XXX/`
-(semi‑redacted for security)
+**(semi‑redacted for security)**
 
 <img src="https://github.com/user-attachments/assets/9f86aa07-870d-47f8-8ebe-53286b5fbc89" width="250"/>
 
@@ -35,13 +35,15 @@ All subtasks were updated from **In Process → Done**, and the validation scan 
 
 
 - Updated all subtasks from **In Process → Done** after confirming remediation.
-  
+
+<p>
 <img src="https://github.com/user-attachments/assets/ec439495-2edb-4389-bc7c-7bb10412d5e9" width="250"/>
+<p>
 
-
-
+<p>
 <img src="https://github.com/user-attachments/assets/645cb615-9fbf-45dd-a536-536ece00cf2a" width="250"/>
-
+<p>
+  
 ## Verification
 - All subtasks created and assigned correctly.
 - Development team confirmed completion of remediation work.
@@ -51,7 +53,7 @@ All subtasks were updated from **In Process → Done**, and the validation scan 
 
 ## Result
 All vulnerabilities identified in the initial scan have been triaged, remediated, and validated.  
-A clean follow‑up OpenVAS scan report has been generated and attached, fulfilling compliance requirements for **XX Plus**.
+A clean follow‑up OpenVAS scan report has been generated and attached, fulfilling compliance requirements for Procore Plus.
 
 
 
