@@ -10,28 +10,29 @@ After connecting to the server and escalating to root, the procore-products repo
 ## Completed Tasks
 - Connected to:dev-performance-XX1.XXXXXXX.prod1 as **mrice**, then escalated to root.
 
+<p>
 <img src="https://github.com/user-attachments/assets/a1ae78a2-bd1b-4b23-807e-63a03300b810" width="225"/>
+<p>
 
+<p>
 <img src="https://github.com/user-attachments/assets/ea69cb18-fb27-43c6-a667-cba3ff989617" width="250"/>
+<p>
 
 
+- **Cloned the repository into Apache’s DocumentRoot using HTTPS:**
 
-
-
-
-- Cloned the repository into Apache’s DocumentRoot using HTTPS:
-
+<p>
 <img src="https://github.com/user-attachments/assets/6596f8d9-634a-4a0d-ad0c-1519edfa66ee" width="250"/>
+<p>
 
-
-
+<p>
 <img src="https://github.com/user-attachments/assets/7cd60e4d-9639-4688-bd3b-8b68e4978ba6" width="350"/>
+<p>
 
 
-
-- Located the maintenance version in:websiteDownForMaintenance/ 
-- Replaced the active site’s `index.html` with the maintenance banner by placing it directly in:/var/www/html/ (required by Apache’s default DocumentRoot)
-- Restarted Apache to apply changes:systemctl restart httpd
+- Located the maintenance version in: `websiteDownForMaintenance/` 
+- Replaced the active site’s `index.html` with the maintenance banner by placing it directly in:/var/www/html/ **(required by Apache’s default DocumentRoot)**
+- Restarted Apache to apply changes:**systemctl restart httpd**
 - Verified in browser that the maintenance banner is live:
 - http://10.X.XX.175  
 - http://dev-XXXXX.XXXXX.prod1
