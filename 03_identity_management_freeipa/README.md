@@ -44,7 +44,7 @@ This mirrors real onboarding tasks performed by SysAdmins.
 ---
 
 ### **Add User to Group**  
-*(Included as a subsection inside the “Add User **mpaxton** to FreeIPA” task)*
+*(Included as a subsection inside the “Add User **mpaxton**” task)*
 
 This sub-task extends the user creation workflow by modifying group membership:
 - Navigating the User Groups tab  
