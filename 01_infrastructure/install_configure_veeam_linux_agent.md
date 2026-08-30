@@ -201,6 +201,7 @@ Found NFS, RPC and mountd were missing on firewalld.
 
 <img src="https://github.com/user-attachments/assets/8a927555-d1d0-48b6-98d4-22a1a2e900d0" width="250"/>
 
+
 ### 🔹 11. Added Veeam Repo
 
 - sudo vi /etc/yum.repos.d/veeam.repo
@@ -218,6 +219,9 @@ gpgcheck=1
 gpgkey=https://repository.veeam.com/keys/RPM-E6FBD664
 
 
+<img src="https://github.com/user-attachments/assets/52fb33ff-c888-4413-a341-d62cb548d3f1" width="250"/>
+
+
 ### 🔹 12. Installed Veeam
 
 - sudo dnf install -y epel-release 
@@ -225,11 +229,59 @@ gpgkey=https://repository.veeam.com/keys/RPM-E6FBD664
 - sudo veeamconfig version
 
 
+<img src="https://github.com/user-attachments/assets/a8fba51a-d31c-4277-95f5-e9650338c66b" width="250"/>
+
+
 ### 🔹 13. Launched Veeam TUI
 
 - sudo veeam
 
 Configured backup job similarly to dev-app.
+
+<p>
+<img src="https://github.com/user-attachments/assets/b31842e2-01eb-4091-a8e3-c3c109d520f4" width="250"/>
+<p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/644b5c32-5632-4220-ab61-1f983eb9aa98" width="250"/>
+<p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/96dd71e9-ec46-4fce-b0f1-cb0953c96c6b" width="250"/>
+<p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/34e7ad80-14a7-4261-91a6-e4b485747b62" width="250"/>
+<p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/ebc9819f-89e1-4504-96ed-5af8ccec120a" width="250"/>
+<p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/03b6c335-cc15-4f31-92c4-ad9879faa3fb" width="250"/>
+<p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/010af33a-7bc9-4ed2-a9d5-a36d155ce6c4" width="250"/>
+<p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/73098151-66c4-433f-8a98-d70c430b19fe" width="250"/>
+<p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/fe71311c-6def-45c1-af71-63e92fb82653" width="250"/>
+<p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/301f4478-9883-41bd-a79a-e4c6ecdbe232" width="250"/>
+<p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/bda7ab1b-7ee3-408d-a852-a4fd5c4f7938" width="250"/>
+<p>
+
 
 ---
 
@@ -239,13 +291,20 @@ Configured backup job similarly to dev-app.
 
 Inside Veeam TUI:
 - Selected **Restore**
+
+<img src="https://github.com/user-attachments/assets/5633fc03-486f-469c-abd7-85662b2ff495" width="250"/>
+
 - Mounted restore point to `/mnt/backup`
+
+<img src="https://github.com/user-attachments/assets/99a86089-388d-4df1-bd1f-c4d955904bb3" width="250"/>
 
 Verified:
 - ls /mnt/backup
 
+<img src="https://github.com/user-attachments/assets/4dea4488-4e1e-4b5c-8b36-8e4a03f8bb46" width="250"/>
 
 **Confirmed full filesystem restored in read‑only mode.**
+*Note: I mounted the restore point successfully, and the filesystem I just listed is the full restored machine*
 
 ---
 
@@ -258,17 +317,24 @@ Verified:
 **Checked:**
 - systemctl status httpd
 
+<img src="https://github.com/user-attachments/assets/07857063-bbfd-4cb5-ba9e-efd257735309" width="250"/>
 
 **Result:**
 - Service remained active and running normally.
+
 
 ### 🔹 NFS (Client)
 Stage-web is an NFS client, not the server.
 
 **Checked:**
-- systemctl status nfs-utils 
+- systemctl status nfs-utils
+
+<img src="https://github.com/user-attachments/assets/7f443f1d-8483-47d0-b382-dbe77b0b4f99" width="250"/>
+
+
 - mount | grep nfs
 
+<img src="https://github.com/user-attachments/assets/c399e550-f604-4688-b833-cc6c8ffd939c" width="250"/>
 
 **Outcome:**
 - NFS mounts remained active and unchanged  
