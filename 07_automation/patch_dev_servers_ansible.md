@@ -139,3 +139,10 @@ Results:
 ## Result
 Successfully automated patching of development servers using Ansible.  
 Validated Python interpreters, created a custom patching playbook, handled privilege escalation, and confirmed both servers were fully updated with no errors.
+
+## This ticket demonstrates real automation workflow:
+- Inventory targeting  
+- Interpreter validation  
+- Playbook creation  
+- Privilege escalation  
+- Multi‑host orchestration  
